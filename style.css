@@ -7,6 +7,8 @@ body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #f5f3ee;
         }
+
+        /* Navbar */
         .navbar {
             display: flex;
             align-items: center;
@@ -66,6 +68,8 @@ body {
             background-color: #d2b48c;
             color: #8d6748;
         }
+
+        /* Home Page Content (Banner) */
         .content {
             background-image: url(./img/banner2.jpg);
             width: 100%;
@@ -118,6 +122,8 @@ body {
             color: white;
       }
 
+
+      /* Dropdown */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -157,6 +163,8 @@ body {
     color: #8d6748;
 }
 
+
+/* Products Section */
 .products{
     display: flex;
     flex-direction: column;
@@ -271,6 +279,8 @@ color: #6b4f2a;
     background-color: #6b4f2a;
 }
 
+
+/* Cart Specific Styles */
 #cart-items {
     display: flex;
     flex-wrap: wrap;
@@ -400,7 +410,7 @@ color: #6b4f2a;
     margin-top: 18px;
 }
 
-/* Add to your existing style.css */
+/*quantity*/
 
 .quantity-controls {
     display: flex;
@@ -459,4 +469,199 @@ color: #6b4f2a;
     text-align: center;
     color: #6b4f2a;
     margin-bottom: 30px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 10px;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Make logo take full width */
+        justify-content: center; /* Center the logo */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        align-items: center;
+    }
+
+    .navbar .nav-links a,
+    .navbar .login-btn a {
+        padding: 10px 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .login-btn {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static; /* Make dropdown content flow with document */
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #f5f3ee;
+        padding: 0;
+    }
+
+    #category-dropdown a {
+        padding: 10px;
+        color: #8d6748; /* Adjust color for better visibility on mobile dropdown */
+    }
+    #category-dropdown a:hover {
+        background-color: #d2b48c;
+        color: #fff;
+    }
+
+
+    .content {
+        align-items: center; /* Center align text on small screens */
+        text-align: center;
+        padding: 20px;
+        height: 70vh; /* Adjust height for mobile banner */
+        background-position: center; /* Center background image */
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+        margin-right: 0;
+        max-width: 90%; /* Constrain width */
+    }
+
+    .content p {
+        font-size: 1rem;
+        margin-right: 0;
+        max-width: 90%; /* Constrain width */
+    }
+
+    #btn1 button {
+        margin-right: 0;
+    }
+
+    .products h2 {
+        font-size: 2rem;
+    }
+
+    .trendy-products-cards {
+        gap: 20px; /* Reduce gap between cards */
+    }
+
+    .product-card {
+        width: 90%; /* Make product cards take more width */
+        max-width: 300px; /* Max width for consistency */
+    }
+
+    .cart-content {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .cart-product-card {
+        flex-direction: column; /* Stack image and details on mobile */
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        width: 100%;
+        max-width: unset; /* Remove max-width constraint */
+    }
+
+    .cart-product-card img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        align-items: center;
+    }
+    .footer-links div {
+        width: 100%; /* Ensure each footer link column takes full width */
+    }
+
+    .footer-logo-desc {
+        align-items: center;
+    }
+
+    .footer-desc {
+        max-width: 90%;
+    }
+}
+
+/* Medium Devices (e.g., Tablets - 768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar .logo {
+        margin-right: 20px;
+    }
+
+    .navbar .nav-links {
+        gap: 15px;
+    }
+
+    .content h1 {
+        font-size: 2.8rem;
+        margin-right: 50px;
+    }
+
+    .content p {
+        font-size: 1.1rem;
+        margin-right: 25px;
+        max-width: 450px;
+    }
+
+    #btn1 button {
+        margin-right: 100px;
+    }
+
+    .products h2 {
+        font-size: 2.3rem;
+    }
+
+    .trendy-products-cards {
+        gap: 25px;
+    }
+
+    .product-card {
+        width: 240px;
+        padding: 20px 15px;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    .footer-links {
+        gap: 30px;
+    }
 }
